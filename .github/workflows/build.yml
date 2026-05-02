@@ -31,7 +31,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - uses: docker/setup-qemu-action@v3
+      - uses: docker/setup-qemu-action@v4
         with:
           # arm64 is the primary target (Apple Silicon dev machines); QEMU is
           # slow for cargo install but only runs on GHA, not the laptop.

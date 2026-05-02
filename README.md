@@ -14,7 +14,7 @@ What's baked in:
 - Rust toolchain via rustup (default `stable` + `clippy`, `rustfmt`,
   `llvm-tools-preview`)
 - `cargo-llvm-cov`, `cargo-edit` (compiled at build time, cached in image)
-- Node 20 via nvm (system-wide at `/usr/local/share/nvm`)
+- Node (Active LTS) via nvm (system-wide at `/usr/local/share/nvm`)
 - Claude Code CLI at `/home/vscode/.local/bin/claude`
 
 Default user is `vscode` (provided by the Microsoft base image, with
@@ -27,8 +27,8 @@ Published to `ghcr.io/yumike/devcontainer-base-image` on every push to
 
 - `latest` — head of `main`. Floating; do not pin builds to this in
   production-ish setups.
-- `YYYY-MM-DD` — date stamp at build time. Human-readable, immutable for
-  the day.
+- `YYYY-MM-DD` — date stamp at build time. Human-readable; mutable within
+  the day (the last build of the day wins).
 - `<short-sha>` — short git SHA, immutable.
 - `@sha256:...` — content-addressable digest, fully immutable. Use this
   for downstream `FROM` if you want bit-reproducibility.
@@ -63,8 +63,8 @@ Override via `--build-arg`:
 | Arg | Default | Notes |
 | --- | --- | --- |
 | `UBUNTU_VARIANT` | `ubuntu-24.04` | Microsoft base image tag |
-| `NODE_VERSION` | `20` | nvm install target |
-| `NVM_VERSION` | `v0.40.1` | nvm itself |
+| `NODE_VERSION` | Active LTS (Renovate-tracked) | nvm install target |
+| `NVM_VERSION` | Renovate-tracked | nvm itself |
 | `RUST_DEFAULT_TOOLCHAIN` | `stable` | rustup default |
 | `CARGO_INSTALL_TOOLS` | `cargo-llvm-cov cargo-edit` | space-separated cargo crates |
 

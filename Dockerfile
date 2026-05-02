@@ -15,7 +15,6 @@ FROM mcr.microsoft.com/devcontainers/base:${UBUNTU_VARIANT}
 # Re-declare ARGs after FROM so they're available in subsequent layers
 ARG NODE_VERSION=20
 ARG NVM_VERSION=v0.40.1
-ARG GH_VERSION
 ARG RUST_DEFAULT_TOOLCHAIN=stable
 ARG CARGO_INSTALL_TOOLS="cargo-llvm-cov cargo-edit"
 

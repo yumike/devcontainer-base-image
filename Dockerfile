@@ -12,8 +12,12 @@
 ARG UBUNTU_VARIANT=ubuntu-24.04
 FROM mcr.microsoft.com/devcontainers/base:${UBUNTU_VARIANT}
 
-# Re-declare ARGs after FROM so they're available in subsequent layers
-ARG NODE_VERSION=20
+# Re-declare ARGs after FROM so they're available in subsequent layers.
+# `# renovate:` annotations are read by the customManagers:dockerfileVersions
+# preset; nvm/node ARGs get tracked, the rest ride the weekly cron rebuild.
+# renovate: datasource=node-version depName=node versioning=node
+ARG NODE_VERSION=24.15.0
+# renovate: datasource=github-tags depName=nvm-sh/nvm
 ARG NVM_VERSION=v0.40.1
 ARG RUST_DEFAULT_TOOLCHAIN=stable
 ARG CARGO_INSTALL_TOOLS="cargo-llvm-cov cargo-edit"

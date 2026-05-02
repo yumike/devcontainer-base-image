@@ -8,6 +8,7 @@ on:
       - 'CLAUDE.md'
       - 'LICENSE'
       - '.gitignore'
+      - 'renovate.json'
   workflow_dispatch:
   schedule:
     # Weekly Monday 06:00 UTC — refreshes apt layer + rustup channel + nvm.

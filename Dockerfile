@@ -6,7 +6,7 @@
 # inside an underpowered laptop sandbox.
 #
 # Built and published by GitHub Actions to ghcr.io. Downstream:
-#   FROM ghcr.io/<owner>/devcontainer-base-image:latest
+#   FROM ghcr.io/yumike/devcontainer-base-image:latest
 # Or pin by digest for reproducibility.
 
 ARG UBUNTU_VARIANT=ubuntu-24.04

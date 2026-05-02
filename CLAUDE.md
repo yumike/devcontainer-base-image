@@ -5,7 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## What this repo is
 
 A single-Dockerfile project that publishes a personal devcontainer base image
-(`ghcr.io/<owner>/devcontainer-base-image`) via GitHub Actions. There is no
+(`ghcr.io/yumike/devcontainer-base-image`) via GitHub Actions. There is no
 application code — the deliverable is the image itself.
 
 Core constraint: **expensive tooling is installed at GHA build time, not at

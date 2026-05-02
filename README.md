@@ -22,7 +22,7 @@ passwordless sudo). Workdir is `/workspace`.
 
 ## Image refs
 
-Published to `ghcr.io/<owner>/devcontainer-base-image` on every push to
+Published to `ghcr.io/yumike/devcontainer-base-image` on every push to
 `main` and weekly via cron. Tags:
 
 - `latest` — head of `main`. Floating; do not pin builds to this in
@@ -39,10 +39,10 @@ Multi-arch: `linux/amd64` + `linux/arm64`.
 
 ```Dockerfile
 # Floating tag (auto-bumps weekly)
-FROM ghcr.io/<owner>/devcontainer-base-image:latest
+FROM ghcr.io/yumike/devcontainer-base-image:latest
 
 # Or pin by digest (immutable)
-FROM ghcr.io/<owner>/devcontainer-base-image@sha256:<digest>
+FROM ghcr.io/yumike/devcontainer-base-image@sha256:<digest>
 ```
 
 If your downstream devcontainer mounts a named volume on `/usr/local/cargo`

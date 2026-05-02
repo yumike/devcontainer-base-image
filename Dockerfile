@@ -44,13 +44,13 @@ ENV CARGO_HOME=/usr/local/cargo \
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \
         | sh -s -- -y --no-modify-path --default-toolchain "${RUST_DEFAULT_TOOLCHAIN}" \
             --component clippy --component rustfmt --component llvm-tools-preview \
-    && chmod -R a+rwX "${CARGO_HOME}" "${RUSTUP_HOME}"
+    && chmod -R a+rX "${CARGO_HOME}" "${RUSTUP_HOME}"
 
 # 4. Cargo dev tools — the slow step. Compiled from source on the GHA runner
 #    once per image build, baked into /usr/local/cargo/bin so downstream
 #    devcontainers don't pay the compile cost on every `devpod up`.
 RUN cargo install --locked ${CARGO_INSTALL_TOOLS} \
-    && chmod -R a+rwX "${CARGO_HOME}"
+    && chmod -R a+rX "${CARGO_HOME}"
 
 # 5. Node via nvm, installed system-wide so PATH-on-shell sees it.
 ENV NVM_DIR=/usr/local/share/nvm

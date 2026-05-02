@@ -18,7 +18,7 @@ FROM mcr.microsoft.com/devcontainers/base:${UBUNTU_VARIANT}
 # renovate: datasource=node-version depName=node versioning=node
 ARG NODE_VERSION=24.15.0
 # renovate: datasource=github-tags depName=nvm-sh/nvm
-ARG NVM_VERSION=v0.40.1
+ARG NVM_VERSION=v0.40.4
 ARG RUST_DEFAULT_TOOLCHAIN=stable
 ARG CARGO_INSTALL_TOOLS="cargo-llvm-cov cargo-edit"
 

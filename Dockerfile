@@ -71,6 +71,7 @@ ENV PATH=${NVM_DIR}/current/bin:${PATH}
 USER vscode
 RUN curl -fsSL https://claude.ai/install.sh | bash \
     && test -x /home/vscode/.local/bin/claude
+ENV PATH=/home/vscode/.local/bin:${PATH}
 
 # 7. PATH hint for interactive shells (login + non-login).
 USER root

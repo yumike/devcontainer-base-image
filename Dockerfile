@@ -26,7 +26,7 @@ ARG CARGO_INSTALL_TOOLS="cargo-llvm-cov cargo-edit"
 RUN apt-get update && apt-get install -y --no-install-recommends \
         build-essential pkg-config libssl-dev \
         git curl ca-certificates gnupg \
-        zsh fzf less jq \
+        zsh fzf less jq tmux \
     && rm -rf /var/lib/apt/lists/*
 
 # 2. GitHub CLI from the official apt repo (small, signed).

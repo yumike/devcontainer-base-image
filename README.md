@@ -9,7 +9,7 @@ What's baked in:
 
 - Ubuntu 24.04 (`mcr.microsoft.com/devcontainers/base:ubuntu-24.04`)
 - Build deps (`build-essential`, `pkg-config`, `libssl-dev`)
-- `git`, `curl`, `gnupg`, `zsh`, `fzf`, `less`, `jq`
+- `git`, `curl`, `gnupg`, `zsh`, `fzf`, `less`, `jq`, `tmux`
 - GitHub CLI (`gh`)
 - Rust toolchain via rustup (default `stable` + `clippy`, `rustfmt`,
   `llvm-tools-preview`)

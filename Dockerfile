@@ -1,4 +1,4 @@
-# syntax=docker/dockerfile:1.23
+# syntax=docker/dockerfile:1.24
 
 # Personal devcontainer base image: Ubuntu + Rust + Node + gh + Claude Code +
 # cargo dev tools, all installed at build time so downstream devcontainers

@@ -16,7 +16,7 @@ FROM mcr.microsoft.com/devcontainers/base:${UBUNTU_VARIANT}
 # `# renovate:` annotations are read by the customManagers:dockerfileVersions
 # preset; nvm/node ARGs get tracked, the rest ride the weekly cron rebuild.
 # renovate: datasource=node-version depName=node versioning=node
-ARG NODE_VERSION=24.15.0
+ARG NODE_VERSION=24.16.0
 # renovate: datasource=github-tags depName=nvm-sh/nvm
 ARG NVM_VERSION=v0.40.4
 ARG RUST_DEFAULT_TOOLCHAIN=stable
